@@ -491,7 +491,7 @@
             <a class="up-arrow" href="#page" data-toggle="tooltip" title="Наверх" id="up">
                 <span class="glyphicon glyphicon-chevron-up"></span>
             </a><br><br>
-            <p>Made By <a href="" data-toggle="tooltip">DQ-Company</a></p>
+            <p>Made By <a href="#page" data-toggle="tooltip">DQ-Company</a></p>
         </footer>
 
         <!-- Yandex.Metrika counter --> 
@@ -529,7 +529,7 @@
                 $('[data-toggle="tooltip"]').tooltip();
 
                 // Add smooth scrolling to all links in navbar + footer link
-                $(".navbar a, #up, #gpzu, #solution, #kadastr, #sobst, #prirezka, #crutch, .box1 a").on('click', function (event) {
+                $(".navbar a, #up, #gpzu, #solution, #kadastr, #sobst, #prirezka, #crutch, .box1 a, footer p a").on('click', function (event) {
 
                     // Make sure this.hash has a value before overriding default behavior
                     if (this.hash !== "") {
