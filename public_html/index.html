@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Решение строительных вопросов</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.7">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            .bg-1 {
+                background-color: #2d2d30;
+                color: #bdbdbd;
+            }
+
+            .line {
+                width: 100%; 
+                height: auto; 
+                min-width: 500px; 
+                background-color: #2d2d30; 
+                display: table;
+                color: white;
+                text-align: center;
+                vertical-align: central;
+            }
+
+            .box1, .box2 {
+                display: table-cell;
+                padding-top: 15px;
+            }
+
+            .demo-icon1 {
+                width: 50%; 
+                min-width: 64px;
+            }
+
+            .demo-icon2 {
+                width: 25%; 
+                min-width: 32px;
+            }
+
+            .image img {
+                max-width: 100%; 
+                min-width: 500px; 
+                height: auto;
+            }
+
+            .block-white {
+                width: 100%; 
+                height: auto; 
+                min-width: 500px; 
+            }
+
+            .block-gray {
+                width: 100%; 
+                height: auto; 
+                min-width: 500px;
+                background-color: #2d2d30; 
+                color: white;
+            }
+
+            .content {
+                width: 100%; 
+                height: auto;
+                display: table;
+                text-align: center;
+                vertical-align: central;
+            }
+
+            .content-cell {
+                display: table-cell;
+            }
+
+            .icon {
+                width: 50%; 
+                min-width: 64px;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                background-color: #D9534F;
+                color: #f1f1f1;
+                border-radius: 0;
+                transition: .2s;
+            }
+
+            .btn:hover, .btn:focus {
+                border: 1px solid #333;
+                background-color: #fff;
+                color: #000;
+            }
+
+            footer {
+                background-color: #2d2d30;
+                color: #f5f5f5;
+                padding: 32px;
+            }
+
+            footer a {
+                color: #f5f5f5;
+            }
+
+            footer a:hover {
+                color: #777;
+                text-decoration: none;
+            }
+
+            #navbarList li a:hover {
+                background-color: #D9534F;
+                color: white;
+            }
+        </style>
+    </head>
+    <body id="page" data-spy="scroll" data-target=".navbar" data-offset="50">
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar" style="opacity: 0.9;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#" style="margin-top: -10px; margin-left: 10px">
+                        <img src="logo-nav_2.png" height="40">
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li style="color: white; margin: 15px 0px 0px 15px;"><strong>8(812)960-28-80</strong></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Услуги
+                                <span class="caret"></span></a>
+                            <ul class="dropdown-menu" id="navbarList">
+                                <li><a href="#solution">Разрешение на строительство</a></li>
+                                <li><a href="#gpzu">Получение ГПЗУ</a></li>
+                                <li><a href="#kadastr">Кадастровый учёт</a></li>
+                                <li><a href="#sobst">Свидетельство о собственности</a></li>
+                                <li><a href="#prirezka">Увеличение площади участка</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#contact" id="crutch" class="contacts">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="image">
+            <img src="HSEB-Slider.jpg">
+        </div>
+
+        <div class="line">
+            <div class="container">
+                <div class="box1">
+                    <a href="#gpzu"><img src="icons/contract.png" class="demo-icon1" ></a>
+                    <p><strong>ГПЗУ</strong></p>
+                    <p>5000 руб.</p>
+                </div>
+                <div class="box2">
+                    <img src="icons/right-arrow.png" class="demo-icon2">
+                </div>
+                <div class="box1">
+                    <a href="#solution"><img src="icons/exam.png" class="demo-icon1"></a>
+                    <p><strong>Разрешение на строительство</strong></p>
+                    <p>20000 руб.</p>                    
+                </div>
+                <div class="box2">
+                    <img src="icons/right-arrow.png" class="demo-icon2">
+                </div>
+                <div class="box1">
+                    <a href="#kadastr"><img src="icons/board-game-map.png" class="demo-icon1"></a>
+                    <p><strong>Кадастровый учёт</strong></p>
+                    <p>20000 руб.</p>                    
+                </div>
+                <div class="box2">
+                    <img src="icons/right-arrow.png" class="demo-icon2">
+                </div>
+                <div class="box1">
+                    <a href="#sobst"><img src="icons/house.png" class="demo-icon1"></a>
+                    <p><strong>Свидетельство о собственности</strong></p>
+                    <p>10000 руб.</p>                    
+                </div>
+                <div class="line-text text-center">
+                    <p><strong>Внимание!</strong></p>
+                    <p>При заказе всего комплекта услуг стоимость составит <del>55000</del> <strong style="background-color: #D9534F;">50000 руб.</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="solution" class="block-white">
+            <div class="container text-center">
+                <h3><strong>Разрешение на строительство</strong></h3>
+                <br>
+                <p>Разрешение на строительство - это документ, необходимый для осуществления строительства и реконструкции любого объекта капитального строительства (будь то индивидуальный жилой дом, магазин, автомойка, склад, кафе и пр.) на земельном участке</p>
+                <p>Если Вы не знаете с чего начать или не хотите тратить своё время на посещение гос. учереждений, или столкнулись с непреодолимой проблемой мы поможем <strong>решить Ваш вопрос!</strong></p>
+                <p><strong>Почему мы?</strong></p>
+                <p>У нас:</p>
+                <p>- налажены контакты со многими Администрациями и Комитетом по градостроительству</p>
+                <p>- индвидуальный подход к каждому (в любой момент Вы можете узнать на каком этапе согласования Вы находитесь)</p>
+                <p>- богатый опыт получения исходно-разрешительной документации для самых разных объектов строительства</p>
+                <p>- Вам никуда <strong>не придётся ехать!</strong> Наш специалист сам приедет к Вам для заключения договора и он же доставит документы по их готовности <strong>бесплатно!</strong></p>
+                <p>- и, наконец, <strong>самые низкие цены в городе!</strong></p>
+                <br>
+                <div class="content">
+                    <div class="content-cell">
+                        <p><strong>Необходимые документы</strong></p><br>
+                        <a href="#coll1" data-toggle="collapse">
+                            <img src="icons/docs.png" class="icon">
+                        </a>
+                        <div id="coll1" class="collapse">
+                            <p><em><a href="#gpzu" id="crutch">Градостроительный план земельного участка (ГПЗУ)</a></em></p>
+                            <p><em>Схема планировочной организации участка (СПОУ)</em></p>
+                            <p><em>Доверенность</em></p>
+                            <p><em>Копия паспорта</em></p>                        
+                            <p><em>Правоустанавливающие документы на земельный участок</em></p>
+                        </div>
+                    </div>
+                    <div class="content-cell">
+                        <p><strong>Стоимость услуги</strong></p><br>
+                        <a href="#coll2" data-toggle="collapse">
+                            <img src="icons/ruble-currency-sign.png" class="icon">
+                        </a>
+                        <div id="coll2" class="collapse">
+                            <p><em>20000 руб. (в стоимость входит разработка схемы планировочной организации участка (СПОУ))</em></p>
+                        </div>                    
+                    </div>
+                    <div class="content-cell">
+                        <p><strong>Наши гарантии</strong></p><br>
+                        <a href="#coll3" data-toggle="collapse">
+                            <img src="icons/security.png" class="icon">
+                        </a>
+                        <div id="coll3" class="collapse">
+                            <p><em>Заключение договора</em></p>
+                            <p><em>Работа на результат (если по какой-то причине мы не решим Ваш вопрос, то мы не будем брать оплату)</em></p>
+                        </div>                    
+                    </div>
+                </div>
+                <br>
+                <div class="line-text text-center">
+                    <p class="text-center"><em>Оставьте свою заявку и Вы получите бесплатную консультацию по интересующему Вас вопросу</em></p>
+                    <a href="#contact" id="crutch"><button class="btn">Получить бесплатную консультацию</button></a>
+                </div>
+                <br>
+            </div>
+        </div>
+
+        <div id="gpzu" class="block-gray">
+            <div class="container text-center">
+                <h3>Градостроительный план земельного участка</h3>
+                <br>
+                <p>Градостроительный план земельного участка (ГПЗУ) является первым необходимым 
+                    документом для получения разрешения на строительство. По сути, в нём отображается 
+                    информация о всех возможных ограничениях для данного земельного участка в той 
+                    территориальной зоне, в которой он расположен, основные и условно-разрешённые 
+                    назначения объектов строительства, инженерные сети, технические условия и пр.</p>
+                <p>Часто бывает, что заявитель пытается получить ГПЗУ, ждёт <strong>1 месяц</strong> (именно столько
+                    подготавливается документ) и после его получения выясняется, что планируемое 
+                    назначение объекта капитального строительства на этом участке <strong>невозможно.</strong></p>
+                <p>Обращаясь к нам, Вы <strong>съэкономите своё время</strong>, т.к. мы сможем сразу сказать
+                    <strong>(бесплатно),</strong> возможно ли на участке то строительство, которое Вы запланировали.</p>                
+                <p>В нашем распоряжении есть необходимые инструменты, которые позволят буквально за 
+                    пару минут дать Вам всю предварительную информацию по земельному участку в рамках 
+                    градостроительного регламента.</p>
+                <br>
+                <div class="content">
+                    <div class="content-cell">
+                        <p><strong>Необходимые документы</strong></p><br>
+                        <a href="#coll4" data-toggle="collapse">
+                            <img src="icons/file-white.png" class="icon">
+                        </a>
+                        <div id="coll4" class="collapse">
+                            <p><em>Правоустанавливающие документы на земельный участок</em></p>
+                            <p><em>Доверенность</em></p>
+                            <p><em>Копия паспорта</em></p>
+                        </div>
+                    </div>
+                    <div class="content-cell">
+                        <p><strong>Стоимость услуги</strong></p><br>
+                        <a href="#coll5" data-toggle="collapse">
+                            <img src="icons/ruble-currency-sign-white.png" class="icon">
+                        </a>
+                        <div id="coll5" class="collapse">
+                            <p><em>5000 руб.</em></p>
+                        </div>                    
+                    </div>
+                    <div class="content-cell">
+                        <p><strong>Наши гарантии</strong></p><br>
+                        <a href="#coll6" data-toggle="collapse">
+                            <img src="icons/security-white.png" class="icon">
+                        </a>
+                        <div id="coll6" class="collapse">
+                            <p><em>Заключение договора</em></p>
+                            <p><em>Работа на результат (если по какой-то причине мы не решим Ваш вопрос, то мы не будем брать оплату)</em></p>
+                        </div>                    
+                    </div>
+                </div>
+                <br>
+                <br>
+                <p class="text-center"><em>Оставьте свою заявку и Вы получите бесплатную консультацию по интересующему Вас вопросу</em></p>
+                <a href="#contact" id="crutch"><button class="btn">Получить бесплатную консультацию</button></a>
+            </div>
+            <br>
+        </div>
+
+        <div id="kadastr" class="block-white">
+            <div class="container text-center">
+                <h3>Постановка на кадастровый учёт</h3>
+                <br>
+                <p>Это следующий этап после завершения строительства. Постановка на кадастровый учёт означает внесение объекта недвижимости 
+                    в единый государственный реестр и является необходимым для получения свидетельства о собственности</p>
+                <br>
+                <div class="content">
+                    <div class="content-cell">
+                        <p><strong>Необходимые документы</strong></p><br>
+                        <a href="#coll7" data-toggle="collapse">
+                            <img src="icons/docs.png" class="icon">
+                        </a>
+                        <div id="coll7" class="collapse">
+                            <p><em>Правоустанавливающие документы на земельный участок</em></p>
+                            <p><em>Доверенность</em></p>
+                            <p><em>Копия паспорта</em></p>
+                            <p><em>Геодезический и межевой план (если на учёт ставится земельный участок)</em></p>
+                            <p><em>Технический план (если на учёт ставится здание)</em></p>
+                        </div>
+                    </div>
+                    <div class="content-cell">
+                        <p><strong>Стоимость услуги</strong></p><br>
+                        <a href="#coll8" data-toggle="collapse">
+                            <img src="icons/ruble-currency-sign.png" class="icon">
+                        </a>
+                        <div id="coll8" class="collapse">
+                            <p><em>20000 руб. (в стоимость входит разработка геодезических планов и выезд кадастрового инженера)</em></p>
+                        </div>                    
+                    </div>
+                    <div class="content-cell">
+                        <p><strong>Наши гарантии</strong></p><br>
+                        <a href="#coll9" data-toggle="collapse">
+                            <img src="icons/security.png" class="icon">
+                        </a>
+                        <div id="coll9" class="collapse">
+                            <p><em>Заключение договора</em></p>
+                            <p><em>Работа на результат (если по какой-то причине мы не решим Ваш вопрос, то мы не будем брать оплату)</em></p>
+                        </div>                    
+                    </div>
+                </div>
+                <br>
+                <br>
+                <p class="text-center">Оставьте свою заявку и Вы получите бесплатную консультацию по интересующему Вас вопросу</p>
+                <a href="#contact" id="crutch"><button class="btn">Получить бесплатную консультацию</button></a>
+            </div>
+            <br>
+        </div>
+
+        <div id="sobst" class="block-gray">
+            <div class="container text-center">
+                <h3>Получение свидетельства о собственности</h3>
+                <br>
+                <p>Регистрация права собственности необходима, чтобы стать полноценным владельцем недвижимости и 
+                    распоряжаться ею по своему усмотрению (продавать, сдавать в аренду и пр.). Результатом является
+                    появление соответствующей записи о регистрации в едином государственном реестре прав.</p>
+                <br>
+                <div class="content">
+                    <div class="content-cell">
+                        <p><strong>Необходимые документы</strong></p><br>
+                        <a href="#coll10" data-toggle="collapse">
+                            <img src="icons/file-white.png" class="icon">
+                        </a>
+                        <div id="coll10" class="collapse">
+                            <p><em>Правоустанавливающие документы на земельный участок</em></p>
+                            <p><em>Доверенность</em></p>
+                            <p><em>Копия паспорта</em></p>
+                            <p><em>Кадастровый паспорт на здание</em></p>
+                            <p><em>Разрешение на строительство</em></p>
+                        </div>
+                    </div>
+                    <div class="content-cell">
+                        <p><strong>Стоимость услуги</strong></p><br>
+                        <a href="#coll11" data-toggle="collapse">
+                            <img src="icons/ruble-currency-sign-white.png" class="icon">
+                        </a>
+                        <div id="coll11" class="collapse">
+                            <p><em>10000 руб.</em></p>
+                        </div>                    
+                    </div>
+                    <div class="content-cell">
+                        <p><strong>Наши гарантии</strong></p><br>
+                        <a href="#coll12" data-toggle="collapse">
+                            <img src="icons/security-white.png" class="icon">
+                        </a>
+                        <div id="coll12" class="collapse">
+                            <p><em>Заключение договора</em></p>
+                            <p><em>Работа на результат (если по какой-то причине мы не решим Ваш вопрос, то мы не будем брать оплату)</em></p>
+                        </div>                    
+                    </div>
+                </div>
+                <br>
+                <br>
+                <p class="text-center">Оставьте свою заявку и Вы получите бесплатную консультацию по интересующему Вас вопросу</p>
+                <a href="#contact" id="crutch"><button class="btn">Получить бесплатную консультацию</button></a>
+            </div>
+            <br>
+        </div>
+
+        <div id="prirezka" class="block-white">
+            <div class="container text-center">
+                <h3>Увеличение площади земельного участка</h3>
+                <br>
+                <p>С 1 марта 2015 г. на основании Федерального закона от 23.06.2014 N 171-ФЗ (ред. от 08.03.2015) 
+                    у владельцев земельных участков появилась возможность соверешенно легально узаконить самовольно
+                    занятые земли или занять соседний пустующий муниципальный участок.</p>
+
+                <br>
+                <div class="content">
+                    <div class="content-cell">
+                        <p><strong>Необходимые документы</strong></p><br>
+                        <a href="#coll13" data-toggle="collapse">
+                            <img src="icons/docs.png" class="icon">
+                        </a>
+                        <div id="coll13" class="collapse">
+                            <p><em>Правоустанавливающие документы на земельный участок</em></p>
+                            <p><em>Доверенность</em></p>
+                            <p><em>Копия паспорта</em></p>
+                            <p><em>Проект межевания территории, на которой расположен участок</em></p>
+                        </div>
+                    </div>
+                    <div class="content-cell">
+                        <p><strong>Стоимость услуги</strong></p><br>
+                        <a href="#coll14" data-toggle="collapse">
+                            <img src="icons/ruble-currency-sign.png" class="icon">
+                        </a>
+                        <div id="coll14" class="collapse">
+                            <p><em>от 10000 руб.</em></p>
+                        </div>                    
+                    </div>
+                    <div class="content-cell">
+                        <p><strong>Наши гарантии</strong></p><br>
+                        <a href="#coll15" data-toggle="collapse">
+                            <img src="icons/security.png" class="icon">
+                        </a>
+                        <div id="coll15" class="collapse">
+                            <p><em>Заключение договора</em></p>
+                            <p><em>Работа на результат (если по какой-то причине мы не решим Ваш вопрос, то мы не будем брать оплату)</em></p>
+                        </div>                    
+                    </div>
+                </div>
+                <br>
+                <br>
+                <p class="text-center">Оставьте свою заявку и Вы получите бесплатную консультацию по интересующему Вас вопросу</p>
+                <a href="#contact" id="crutch"><button class="btn">Получить бесплатную консультацию</button></a>
+            </div>
+            <br>
+        </div>
+
+        <div id="contact" class="block-gray">
+            <div class="container">
+                <h3 class="text-center">Контакты</h3>
+                <p class="text-center"><em>Оставьте заявку и мы свяжемся с Вами!</em></p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <p>Как с нами связаться:</p>
+                        <p><span class="glyphicon glyphicon-phone"></span>Телефон: 8(812)960-28-80</p>
+                        <p><span class="glyphicon glyphicon-envelope"></span>Email: rsvopros@gmail.com</p>
+                    </div>
+                    <form action="send.php" method="post">
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-sm-6 form-group">
+                                    <input class="form-control" id="name" name="name" placeholder="Имя" type="text" required>
+                                </div>
+                                <div class="col-sm-6 form-group">
+                                    <input class="form-control" id="phone" name="phone" placeholder="Телефон" type="text" required>
+                                </div>
+                            </div>
+                            <textarea class="form-control" id="comments" name="comments" placeholder="Комментарий" rows="5"></textarea>
+                            <div class="row">
+                                <div class="col-md-12 form-group">
+                                    <button class="btn pull-right" type="submit">Отправить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <footer class="block-gray text-center">
+            <a class="up-arrow" href="#page" data-toggle="tooltip" title="Наверх" id="up">
+                <span class="glyphicon glyphicon-chevron-up"></span>
+            </a><br><br>
+            <p>Made By <a href="" data-toggle="tooltip">DQ-Company</a></p>
+        </footer>
+
+        <!-- Yandex.Metrika counter --> 
+        <script type="text/javascript" >
+            (function (d, w, c) {
+                (w[c] = w[c] || []).push(function () {
+                    try {
+                        w.yaCounter45693918 = new Ya.Metrika({id: 45693918, clickmap: true, trackLinks: true, accurateTrackBounce: true});
+                    } catch (e) {
+                    }
+                });
+                var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () {
+                    n.parentNode.insertBefore(s, n);
+                };
+                s.type = "text/javascript";
+                s.async = true;
+                s.src = "https://mc.yandex.ru/metrika/watch.js";
+                if (w.opera === "[object Opera]") {
+                    d.addEventListener("DOMContentLoaded", f, false);
+                } else {
+                    f();
+                }
+            })(document, window, "yandex_metrika_callbacks");
+        </script> 
+        <noscript>
+        <div>
+            <img src="https://mc.yandex.ru/watch/45693918" style="position:absolute; left:-9999px;" alt="" />
+        </div>
+        </noscript> 
+        <!-- /Yandex.Metrika counter -->
+
+        <script>
+            $(document).ready(function () {
+                // Initialize Tooltip
+                $('[data-toggle="tooltip"]').tooltip();
+
+                // Add smooth scrolling to all links in navbar + footer link
+                $(".navbar a, #up, #gpzu, #solution, #kadastr, #sobst, #prirezka, #crutch, .box1 a").on('click', function (event) {
+
+                    // Make sure this.hash has a value before overriding default behavior
+                    if (this.hash !== "") {
+
+                        // Prevent default anchor click behavior
+                        event.preventDefault();
+
+                        // Store hash
+                        var hash = this.hash;
+
+                        // Using jQuery's animate() method to add smooth page scroll
+                        // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 900, function () {
+
+                            // Add hash (#) to URL when done scrolling (default click behavior)
+                            window.location.hash = hash;
+                        });
+                    } // End if
+                });
+            });
+        </script>
+    </body>
+</html>
