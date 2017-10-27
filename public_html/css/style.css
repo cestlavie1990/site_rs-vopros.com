@@ -1,0 +1,109 @@
+/* 
+    Created on : Oct 23, 2017, 8:17:20 AM
+    Author     : Mr.Minakov
+*/
+
+#index-page {
+    padding: 0;
+}
+.igs, .prom {
+    padding: 9.15% 0;
+    background-color: red;
+}
+
+.line {
+    width: 100%; 
+    height: auto; 
+    min-width: 500px; 
+    background-color: #2d2d30; 
+    display: table;
+    color: white;
+    text-align: center;
+    vertical-align: central;
+}
+
+.box1, .box2 {
+    display: table-cell;
+    padding-top: 15px;
+}
+
+.demo-icon1 {
+    width: 50%; 
+    min-width: 64px;
+}
+
+.demo-icon2 {
+    width: 25%; 
+    min-width: 32px;
+}
+
+.image img {
+    max-width: 100%; 
+    min-width: 500px; 
+    height: auto;
+}
+
+.block-white {
+    width: 100%; 
+    height: auto; 
+    min-width: 500px; 
+}
+
+.block-gray {
+    width: 100%; 
+    height: auto; 
+    min-width: 500px;
+    background-color: #2d2d30; 
+    color: white;
+}
+
+.content {
+    width: 100%; 
+    height: auto;
+    display: table;
+    text-align: center;
+    vertical-align: central;
+}
+
+.content-cell {
+    display: table-cell;
+}
+
+.icon {
+    width: 50%; 
+    min-width: 64px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #D9534F;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+}
+
+.btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+}
+
+footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+}
+
+footer a {
+    color: #f5f5f5;
+}
+
+footer a:hover {
+    color: #777;
+    text-decoration: none;
+}
+
+#navbarList li a:hover, .dropdown-menu .active a {
+    background-color: #D9534F;
+    color: white;
+}
